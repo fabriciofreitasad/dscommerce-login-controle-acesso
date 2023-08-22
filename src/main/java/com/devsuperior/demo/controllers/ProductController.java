@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
 import com.devsuperior.demo.dto.ProductDTO;
+import com.devsuperior.demo.dto.ProductMinDTO;
 import com.devsuperior.demo.services.ProductService;
 
 @RestController
@@ -25,8 +26,8 @@ public class ProductController {
 	private ProductService productService;
 
 	@GetMapping
-	public ResponseEntity<List<ProductDTO>> findAll() {
-		List<ProductDTO> list = productService.findAll();
+	public ResponseEntity<List<ProductMinDTO>> findAll() {
+		List<ProductMinDTO> list = productService.findAll();
 		return ResponseEntity.ok(list);
 	}
 	
